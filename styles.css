@@ -1,0 +1,152 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary-200: hsl(333, 80%, 67%);
+    --clr-primary-900: hsl(300, 43%, 22%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(300, 24%, 96%);
+    --clr-neutral-700: hsl(303, 10%, 53%); 
+
+    --ff-primary: 'Spartan', sans-serif;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    --fs-11: 0.6875;
+    --fs-15: 0.9375rem; 
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-15);
+    padding: 5em 1em;
+}
+
+/* main sections */
+
+.section {
+    margin-bottom: 3em;
+}
+
+.title--section {
+    text-align: center;
+}
+.rating--section {
+    text-align: center;
+}
+.review--section {}
+.attribution--section {
+    margin-bottom: 0;
+
+    font-size: var(--fs-11);
+    text-align: center;
+}
+
+/* main sections // nested stuff*/
+
+.attribution--section a {
+    color: var(--clr-primary-200);
+}
+
+/* text stuff */
+
+#title {
+    margin-bottom: 0.6em;
+
+    color: var(--clr-primary-900);
+}
+
+.text {
+    font-size: var(--fs-15);
+}
+
+.text--title {
+    color: var(--clr-neutral-700);
+}
+
+.text--rating {
+    color: var(--clr-primary-900);
+    font-weight: var(--fw-bold);
+}
+
+.text--review__name {
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-bold);
+}
+
+.text--review__status {
+    color: var(--clr-primary-200);
+}
+
+.text--review__review {
+    color: var(--clr-neutral-100);
+}
+
+/* content box containers */
+
+.box {
+    margin-bottom: 1em;
+
+    border-radius: 0.7em;
+}
+
+.box--rating {
+    padding: 1em;
+
+    background-color: var(--clr-neutral-200);
+}
+
+.box--review {
+    padding: 3em 1.5em;
+
+    background-color: var(--clr-primary-900);
+
+    display: grid;
+    grid-template-columns: 3em auto;
+    grid-template-rows: repeat(3, auto);
+}
+
+/* content box containers // nested stuff */
+
+.box--rating__stars {
+    margin-bottom: 0.4em;
+}
+
+.review__img {
+    width: 3em;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+
+}
+
+.text--review__name {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.text--review__status {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.text--review__review {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+/* images */
+
+img {
+    max-width: 100%;
+}
+
+.review__img {
+    border-radius: 50%;
+}
